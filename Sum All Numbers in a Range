@@ -1,0 +1,14 @@
+function sumAll(arr) {
+  const x = [];
+  const max = Math.max(...arr);
+  const min = Math.min(...arr);
+  
+  for (var i = min; i <= max; i++){
+    x.push(i);
+  }
+  
+  const y = x.reduce(( accumulator, currentValue ) => accumulator + currentValue, 0);
+  return y;
+}
+
+sumAll([1, 4]);
