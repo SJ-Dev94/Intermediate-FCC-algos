@@ -1,0 +1,28 @@
+This is SO SCUFFED, but it works!
+
+function sumPrimes(num) {
+  const arr = [];
+  
+  for (var i = 1; i <= num; i++){
+    //console.log(i) + isPrime(i);
+    if(isPrime(i)){
+      arr.push(i);
+    }
+  }
+  
+  function isPrime(value) {
+    for(var i = 2; i < value; i++) {
+        if(value % i === 0) {
+            //console.log(false);
+            return false;
+        }
+    }
+    //console.log(value > 1);
+    return value > 1;
+}
+  num = arr.reduce((a, b) => a + b, 0);
+  return num;
+
+}
+
+sumPrimes(10);
