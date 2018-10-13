@@ -1,0 +1,25 @@
+/* Compare two arrays and return a new array with any items only found in one of the two given arrays, but not both. In other words, return the symmetric difference of the two arrays. */
+
+function diffArray(arr1, arr2) {
+  var newArr = [];
+  var symmetricArr = [];
+  // Same, same; but different.
+  newArr = arr1.concat(arr2);
+  
+  
+  function compare(){
+    for (let i = 0; i < newArr.length; i++) {
+    if (arr1.includes(newArr[i]) && arr2.includes(newArr[i]) != true ||                 arr2.includes(newArr[i]) && arr1.includes(newArr[i]) != true ) {
+          symmetricArr.push(newArr[i]);
+      }
+    }
+  }
+
+  compare();
+  return symmetricArr;
+
+}
+
+diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+
+
